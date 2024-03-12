@@ -1,4 +1,4 @@
-package Futbol;
+package jugador;
 
 public class main {
 
