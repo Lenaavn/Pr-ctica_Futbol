@@ -1,4 +1,4 @@
-package jugador.delanteros;
+package jugador.delantero;
 
 public class Extremo {
 	
