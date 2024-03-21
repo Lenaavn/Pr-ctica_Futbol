@@ -26,7 +26,7 @@ public class Equipo {
   public void verificarAlineacionCompleta() throws Exception {
         for (Jugador jugador : alineacion) {
             if (jugador == null) {
-                throw new Exception("No se ha completado la alineación.");
+                throw new IllegalArgumentException("No se ha completado la alineación.");
             }
         }
     }
