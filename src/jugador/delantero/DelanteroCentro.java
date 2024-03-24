@@ -1,13 +1,13 @@
 package jugador.delantero;
 
-
-public class DelanteroCentro{
+public class DelanteroCentro extends Delantero{
 
 	//Atributos
 	private int golesDePenalti;
 	
-	public DelanteroCentro (int golesDePenalti) {
-		
+	//Constructor
+	public DelanteroCentro(String nombre, int dorsal, String equipo, int goles, int golesDePenalti) {
+		super(nombre,dorsal,equipo,goles);
 		this.golesDePenalti = golesDePenalti;
 		
 	}
@@ -20,8 +20,18 @@ public class DelanteroCentro{
 	public void setGolesDePenalti(int golesDePenalti) {
 		this.golesDePenalti = golesDePenalti;
 	}
+
+	@Override
+	public void mostrarDatos() {
+		System.out.println(this.toString());
+		
+	}
 	
-	
+	@Override
+	public String toString() {
+		return " Delantero[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
+		+ ", goles=" + this.getGoles() + ", golesDePenalti=" + this.golesDePenalti + "]";
+	}
 	
 }
  
