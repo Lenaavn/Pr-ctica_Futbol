@@ -1,5 +1,7 @@
 package equipo;
 
+import jugador.Jugador;
+
 public class Equipo {
 
   private Jugador[] alineacion;
