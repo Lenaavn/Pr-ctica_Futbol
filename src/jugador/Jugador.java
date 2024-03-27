@@ -2,16 +2,19 @@ package jugador;
 
 public abstract class Jugador {
 
+	// Atributos
 	private String nombre;
 	private int dorsal;
 	private String equipo;
 
+	// Constructor
 	public Jugador(String nombre, int dorsal, String equipo) {
+		setDorsal(dorsal);
 		this.nombre = nombre;
-		this.dorsal = dorsal;
 		this.equipo = equipo;
 	}
 
+	// Getters y setters
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -25,6 +28,9 @@ public abstract class Jugador {
 	}
 
 	public void setDorsal(int dorsal) {
+		if (dorsal <= 0) {
+			throw new IllegalArgumentException("El dorsal no puede ser negativo. ");
+		}
 		this.dorsal = dorsal;
 	}
 
@@ -36,14 +42,17 @@ public abstract class Jugador {
 		this.equipo = equipo;
 	}
 
+	// Método
 	public abstract void mostrarDatos();
 
 	@Override
 	public boolean equals(Object obj) {
 		Jugador otro = (Jugador) obj;
 		boolean result = false;
-		if (this.dorsal == otro.dorsal) {
-			result = true;
+		if (this.equipo == otro.equipo) {
+			if (this.dorsal == otro.dorsal) {
+				result = true;
+			}
 		}
 		return result;
 	}
