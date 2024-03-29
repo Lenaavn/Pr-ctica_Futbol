@@ -6,8 +6,8 @@ public class MediaPunta extends Centrocampista {
 	private int asistencias;
 
 	// constructores
-	public MediaPunta(int pasesCompletados, int asistencias) {
-		super(pasesCompletados);
+	public MediaPunta(String nombre, int dorsal, String equipo, int pasesCompletados, int asistencias) {
+		super(nombre, dorsal, equipo, pasesCompletados);
 
 		this.asistencias = asistencias;
 	}
@@ -22,4 +22,16 @@ public class MediaPunta extends Centrocampista {
 	}
 
 	// metodos
+	
+	@Override
+	public void mostrarDatos() {
+		System.out.println(this.toString());
+		
+	}
+	
+	@Override
+	public String toString() {
+		return " MediaPunta[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
+		+ ", pasesCompletados=" + this.getPasesCompletados() + ", asistencias=" + this.asistencias + "]";
+	}
 }

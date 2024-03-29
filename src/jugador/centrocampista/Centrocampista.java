@@ -8,8 +8,8 @@ public class Centrocampista extends Jugador {
 	private int pasesCompletados;
 
 	// constructores
-	public Centrocampista(int pasesCompletados) {
-		super();
+	public Centrocampista(String nombre, int dorsal, String equipo,int pasesCompletados) {
+		super(nombre, dorsal, equipo);
 
 		this.pasesCompletados = pasesCompletados;
 	}
@@ -24,4 +24,16 @@ public class Centrocampista extends Jugador {
 	}
 
 	// metodos
+	
+	@Override
+	public void mostrarDatos() {
+		System.out.println(this.toString());
+		
+	}
+	
+	@Override
+	public String toString() {
+		return " Centrocampista[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
+		+ ", pasesCompletados=" + this.pasesCompletados + "]";
+	}
 }
