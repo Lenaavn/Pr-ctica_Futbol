@@ -7,8 +7,8 @@ public class Lateral extends Defensa {
 	private boolean puestoIzquierdo;
 
 	// constructores
-	public Lateral(int disputasRealizadas, boolean puestoDerecho, boolean puestoIzquierdo) {
-		super(disputasRealizadas);
+	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, boolean puestoDerecho, boolean puestoIzquierdo) {
+		super(disputasRealizadas,nombre, dorsal, equipo);
 		this.puestoDerecho = puestoDerecho;
 		this.puestoIzquierdo = puestoIzquierdo;
 	}
@@ -38,4 +38,16 @@ public class Lateral extends Defensa {
 		this.puestoIzquierdo = puestoIzquierdo;
 	}
 
+	@Override
+	public void mostrarDatos() {
+		System.out.println(this.toString());
+
+	}
+
+	@Override
+	public String toString() {
+		return " Defensa[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
+				+ this.getEquipo() + ",disputasRealizadas=" + this.getDisputasRealizadas() + ", puestoDerecho=" + this.puestoDerecho + ", puestoIzquierdo="
+				+ this.puestoIzquierdo + "]";
+	}
 }

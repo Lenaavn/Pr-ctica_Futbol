@@ -7,8 +7,8 @@ public class Defensa extends Jugador{
 			private int disputasRealizadas;
 
 	// constructores
-			public Defensa(int disputasRealizadas) {
-				super();
+			public Defensa(int disputasRealizadas, String nombre, int dorsal, String equipo) {
+				super(nombre, dorsal, equipo);
 			this.disputasRealizadas = disputasRealizadas;
 }
 	// getters y setters
@@ -18,5 +18,17 @@ public class Defensa extends Jugador{
 
 			public void setDisputasRealizadas(int disputasRealizadas) {
 				this.disputasRealizadas = disputasRealizadas;
+			}
+			
+			@Override
+			public void mostrarDatos() {
+				System.out.println(this.toString());
+				
+			}
+			
+			@Override
+			public String toString() {
+				return " Defensa[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
+				+ ", disputasRealizadas=" + this.disputasRealizadas + "]";
 			}
 }

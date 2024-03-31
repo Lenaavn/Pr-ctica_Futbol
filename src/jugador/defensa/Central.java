@@ -7,8 +7,8 @@ public class Central extends Defensa{
 		private int entradas;
 
 	// constructores
-		public Central(int disputasRealizadas, int entradas) {
-			super(disputasRealizadas);
+		public Central(String nombre, int dorsal, String equipo, int disputasRealizadas, int entradas) {
+			super(disputasRealizadas, nombre, dorsal, equipo);
 		this.entradas = entradas;
 }
 	// getters y setters
@@ -21,8 +21,16 @@ public class Central extends Defensa{
 			this.entradas = entradas;
 		}
 		
+		@Override
+		public void mostrarDatos() {
+			System.out.println(this.toString());
+			
+		}
 		
-		
-		
+		@Override
+		public String toString() {
+			return " Defensa[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
+			+ ", disputasRealizadas=" + this.getDisputasRealizadas() + ", entradas=" + this.entradas + "]";
+		}
 		
 }
