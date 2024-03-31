@@ -22,16 +22,16 @@ public class Pivote extends Centrocampista {
 	}
 
 	// metodos
-	
+
 	@Override
 	public void mostrarDatos() {
 		System.out.println(this.toString());
-		
+
 	}
-	
+
 	@Override
 	public String toString() {
-		return " Pivote[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
-		+ ", pasesCompletados=" + this.getPasesCompletados() + ", intercepciones=" + this.intercepciones + "]";
+		return " Pivote[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo()
+				+ ", pasesCompletados=" + this.getPasesCompletados() + ", intercepciones=" + this.intercepciones + "]";
 	}
 }

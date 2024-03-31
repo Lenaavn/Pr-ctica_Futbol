@@ -22,16 +22,17 @@ public class MediaPunta extends Centrocampista {
 	}
 
 	// metodos
-	
+
 	@Override
 	public void mostrarDatos() {
 		System.out.println(this.toString());
-		
+
 	}
-	
+
 	@Override
 	public String toString() {
-		return " MediaPunta[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo() 
-		+ ", pasesCompletados=" + this.getPasesCompletados() + ", asistencias=" + this.asistencias + "]";
+		return " MediaPunta[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
+				+ this.getEquipo() + ", pasesCompletados=" + this.getPasesCompletados() + ", asistencias="
+				+ this.asistencias + "]";
 	}
 }

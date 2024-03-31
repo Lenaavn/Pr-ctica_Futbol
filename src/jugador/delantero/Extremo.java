@@ -6,8 +6,9 @@ public class Extremo extends Delantero {
 	private boolean puestoDerecho;
 	private boolean puestoIzquierdo;
 
-	public Extremo(String nombre, int dorsal, String equipo, int goles, boolean puestoDerecho, boolean puestoIzquierdo) {
-		super(nombre, dorsal, equipo,goles);
+	public Extremo(String nombre, int dorsal, String equipo, int goles, boolean puestoDerecho,
+			boolean puestoIzquierdo) {
+		super(nombre, dorsal, equipo, goles);
 		setPuestoDerecho(puestoDerecho);
 		setPuestoIzquierdo(puestoIzquierdo);
 
@@ -47,8 +48,8 @@ public class Extremo extends Delantero {
 	@Override
 	public String toString() {
 		return " Delantero[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
-				+ this.getEquipo() + ", goles=" + this.getGoles() + ", puestoDerecho=" + this.puestoDerecho + ", puestoIzquierdo="
-				+ this.puestoIzquierdo + "]";
+				+ this.getEquipo() + ", goles=" + this.getGoles() + ", puestoDerecho=" + this.puestoDerecho
+				+ ", puestoIzquierdo=" + this.puestoIzquierdo + "]";
 	}
 
 }
