@@ -1,5 +1,15 @@
 package jugador;
 
+import equipo.Equipo;
+import jugador.Jugador;
+import jugador.portero.Portero;
+import jugador.defensa.Lateral;
+import jugador.defensa.Central;
+import jugador.centrocampista.Pivote;
+import jugador.centrocampista.MediaPunta;
+import jugador.delantero.Extremo;
+import jugador.delantero.DelanteroCentro;
+
 public class main {
 
 	public static void main(String[] args) {
@@ -19,23 +29,25 @@ public class main {
         Jugador delanteroCentro = new DelanteroCentro("Benzema", 9, "Real Madrid", 100, 10);
         
         Jugador[] jugadores = new Jugador[11];
-        equipo.addJugador(portero, 0);
-        equipo.addJugador(lateralIzquierdo, 1);
-        equipo.addJugador(central1, 2);
-        equipo.addJugador(central2, 3);
-        equipo.addJugador(lateralDerecho, 4);
-        equipo.addJugador(pivote1, 5);
-        equipo.addJugador(pivote2, 6);
-        equipo.addJugador(mediapunta, 7);
-        equipo.addJugador(extremoIzquierdo, 8);
-        equipo.addJugador(extremoDerecho, 9);
-        equipo.addJugador(delanteroCentro, 10);
+        equipo.añadirJugador(portero, 0);
+        equipo.añadirJugador(lateralIzquierdo, 1);
+        equipo.añadirJugador(central1, 2);
+        equipo.añadirJugador(central2, 3);
+        equipo.añadirJugador(lateralDerecho, 4);
+        equipo.añadirJugador(pivote1, 5);
+        equipo.añadirJugador(pivote2, 6);
+        equipo.añadirJugador(mediapunta, 7);
+        equipo.añadirJugador(extremoIzquierdo, 8);
+        equipo.añadirJugador(extremoDerecho, 9);
+        equipo.añadirJugador(delanteroCentro, 10);
 		
-		for(Jugador ju : jugadores) {
+		for (Jugador ju : jugadoresEquipo) {
+		if (ju != null) {
 			ju.mostrarDatos();
 		}
-	
-    }
+		equipo.mostrarAlineacion();
+		}
+	}
 }
 
 
