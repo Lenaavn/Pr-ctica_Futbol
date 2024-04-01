@@ -21,12 +21,12 @@ public class Portero extends Jugador {
 
 	@Override
 	public void mostrarDatos() {
-		System.out.print(this.toString());
+		System.out.println(this.toString());
 	}
 
 	@Override
 	public String toString() {
-		return "Portero[nombre= " + this.getNombre() + ", dorsal= " + this.getDorsal() + ", equipo= " + this.getEquipo()
+		return " Portero[nombre= " + this.getNombre() + ", dorsal= " + this.getDorsal() + ", equipo= " + this.getEquipo()
 				+ ", paradas= " + this.paradas + "]";
 	}
 }
