@@ -28,24 +28,24 @@ public class main {
 		Jugador extremoDerecho = new Extremo("Asensio", 11, "Real Madrid", 35, "Derecho");
 		Jugador delanteroCentro = new DelanteroCentro("Benzema", 9, "Real Madrid", 100, 10);
 
-		Jugador[] jugadores = new Jugador[11];
 		equipo.añadirJugador(portero, 0);
-		equipo.añadirJugador(lateralIzquierdo, 1);
-		equipo.añadirJugador(central1, 2);
-		equipo.añadirJugador(central2, 3);
-		equipo.añadirJugador(lateralDerecho, 4);
-		equipo.añadirJugador(pivote1, 5);
-		equipo.añadirJugador(pivote2, 6);
-		equipo.añadirJugador(mediapunta, 7);
-		equipo.añadirJugador(extremoIzquierdo, 8);
-		equipo.añadirJugador(extremoDerecho, 9);
-		equipo.añadirJugador(delanteroCentro, 10);
-
-		for (Jugador ju : jugadoresEquipo) {
-			if (ju != null) {
-				ju.mostrarDatos();
-			}
-			equipo.mostrarAlineacion();
-		}
+        	equipo.añadirJugador(lateralIzquierdo, 1);
+        	equipo.añadirJugador(central1, 2);
+        	equipo.añadirJugador(central2, 3);
+        	equipo.añadirJugador(lateralDerecho, 4);
+        	equipo.añadirJugador(pivote1, 5);
+        	equipo.añadirJugador(pivote2, 6);
+        	equipo.añadirJugador(mediapunta, 7);
+        	equipo.añadirJugador(extremoIzquierdo, 8);
+        	equipo.añadirJugador(extremoDerecho, 9);
+        	equipo.añadirJugador(delanteroCentro, 10);
+		
+        	for (int i = 0; i < equipo.getAlineacion().length; i++) {
+            		Jugador ju = equipo.getAlineacion()[i];
+            		if (ju != null) {
+                		ju.mostrarDatos();
+            		}
+        	}
+		equipo.mostrarAlineacion();
 	}
 }
