@@ -6,36 +6,34 @@ public class Extremo extends Delantero {
 	private boolean puestoDerecho;
 	private boolean puestoIzquierdo;
 
-	public Extremo(String nombre, int dorsal, String equipo, int goles, boolean puestoDerecho,
-			boolean puestoIzquierdo) {
+	// Constructor
+	public Extremo(String nombre, int dorsal, String equipo, int goles, String puesto) {
 		super(nombre, dorsal, equipo, goles);
-		setPuestoDerecho(puestoDerecho);
-		setPuestoIzquierdo(puestoIzquierdo);
-
-	}
+        if (puesto.equalsIgnoreCase("Derecho")) {
+            this.puestoDerecho = true;
+            this.puestoIzquierdo = false;
+        } else if (puesto.equalsIgnoreCase("Izquierdo")) {
+            this.puestoDerecho = false;
+            this.puestoIzquierdo = true;
+        } else {
+            throw new IllegalArgumentException("El puesto debe ser 'derecho' o 'izquierdo'.");
+        }
+    }
 
 	// Metodos get y set
-	public boolean getPuestoDerecho() {
+	public boolean isPuestoDerecho() {
 		return puestoDerecho;
 	}
 
 	public void setPuestoDerecho(boolean puestoDerecho) {
-		if (!puestoDerecho) {
-			throw new IllegalArgumentException("El puesto no está en la posición correcta.");
-		}
-
 		this.puestoDerecho = puestoDerecho;
 	}
 
-	public boolean getPuestoIzquierdo() {
+	public boolean isPuestoIzquierdo() {
 		return puestoIzquierdo;
 	}
 
 	public void setPuestoIzquierdo(boolean puestoIzquierdo) {
-		if (!puestoIzquierdo) {
-			throw new IllegalArgumentException("El puesto no está en la posición correcta.");
-		}
-
 		this.puestoIzquierdo = puestoIzquierdo;
 	}
 
@@ -48,8 +46,8 @@ public class Extremo extends Delantero {
 	@Override
 	public String toString() {
 		return " Delantero[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
-				+ this.getEquipo() + ", goles=" + this.getGoles() + ", puestoDerecho=" + this.puestoDerecho
-				+ ", puestoIzquierdo=" + this.puestoIzquierdo + "]";
+				+ this.getEquipo() + ", goles=" + this.getGoles() + ", puestoDerecho=" + this.puestoDerecho + ", puestoIzquierdo="
+				+ this.puestoIzquierdo + "]";
 	}
 
 }

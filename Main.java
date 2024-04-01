@@ -23,7 +23,7 @@ public class main {
 		Jugador lateralDerecho = new Lateral("Carvajal", 2, "Real Madrid", 45, "Derecho");
 		Jugador pivote1 = new Pivote("Casemiro", 14, "Real Madrid", 60, 40);
 		Jugador pivote2 = new Pivote("Kroos", 8, "Real Madrid", 70, 50);
-		Jugador mediapunta = new Mediapunta("Modric", 10, "Real Madrid", 80, 60);
+		Jugador mediapunta = new MediaPunta("Modric", 10, "Real Madrid", 80, 60);
 		Jugador extremoIzquierdo = new Extremo("Vinicius", 20, "Real Madrid", 30, "Izquierdo");
 		Jugador extremoDerecho = new Extremo("Asensio", 11, "Real Madrid", 35, "Derecho");
 		Jugador delanteroCentro = new DelanteroCentro("Benzema", 9, "Real Madrid", 100, 10);

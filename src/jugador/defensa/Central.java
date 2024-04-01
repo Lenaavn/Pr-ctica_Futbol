@@ -1,7 +1,5 @@
 package jugador.defensa;
 
-import jugador.Jugador;
-
 public class Central extends Defensa {
 	// atributos
 	private int entradas;

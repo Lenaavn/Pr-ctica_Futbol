@@ -7,35 +7,33 @@ public class Lateral extends Defensa {
 	private boolean puestoIzquierdo;
 
 	// constructores
-	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, boolean puestoDerecho,
-			boolean puestoIzquierdo) {
+	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, String puesto) {
 		super(disputasRealizadas, nombre, dorsal, equipo);
-		this.puestoDerecho = puestoDerecho;
-		this.puestoIzquierdo = puestoIzquierdo;
-	}
+		if (puesto.equalsIgnoreCase("Derecho")) {
+            this.puestoDerecho = true;
+            this.puestoIzquierdo = false;
+        } else if (puesto.equalsIgnoreCase("Izquierdo")) {
+            this.puestoDerecho = false;
+            this.puestoIzquierdo = true;
+        } else {
+            throw new IllegalArgumentException("El puesto debe ser 'derecho' o 'izquierdo'.");
+        }
+    }
 
 	// getters y setters
-	public boolean getPuestoDerecho() {
+	public boolean isPuestoDerecho() {
 		return puestoDerecho;
 	}
 
 	public void setPuestoDerecho(boolean puestoDerecho) {
-		if (!puestoDerecho) {
-			throw new IllegalArgumentException("El puesto no está en la posición correcta.");
-		}
-
 		this.puestoDerecho = puestoDerecho;
 	}
 
-	public boolean getPuestoIzquierdo() {
+	public boolean isPuestoIzquierdo() {
 		return puestoIzquierdo;
 	}
 
 	public void setPuestoIzquierdo(boolean puestoIzquierdo) {
-		if (!puestoIzquierdo) {
-			throw new IllegalArgumentException("El puesto no está en la posición correcta.");
-		}
-
 		this.puestoIzquierdo = puestoIzquierdo;
 	}
 
