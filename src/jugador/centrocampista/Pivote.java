@@ -2,17 +2,17 @@ package jugador.centrocampista;
 
 public class Pivote extends Centrocampista {
 
-	// atributos
+	// Atributos
 	private int intercepciones;
 
-	// constructores
+	// Constructores
 	public Pivote(String nombre, int dorsal, String equipo, int pasesCompletados, int intercepciones) {
-		super(nombre, dorsal, equipo, pasesCompletados);
+		super(nombre, dorsal, equipo, "Pivote", pasesCompletados);
 
 		this.intercepciones = intercepciones;
 	}
 
-	// getters and setters
+	// Getters and setters
 	public int getIntercepciones() {
 		return this.intercepciones;
 	}
@@ -21,8 +21,7 @@ public class Pivote extends Centrocampista {
 		this.intercepciones = intercepciones;
 	}
 
-	// metodos
-
+	// Metodos
 	@Override
 	public void mostrarDatos() {
 		System.out.println(this.toString());
@@ -31,7 +30,8 @@ public class Pivote extends Centrocampista {
 
 	@Override
 	public String toString() {
-		return " Pivote[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo()
-				+ ", pasesCompletados=" + this.getPasesCompletados() + ", intercepciones=" + this.intercepciones + "]";
+		return "Nombre: " + this.getNombre() + ", Dorsal: " + this.getDorsal() + ", Posición: " + this.getPosicion()
+				+ ", PasesCompletados: " + this.getPasesCompletados() + ", Intercepciones: " + this.intercepciones;
 	}
+
 }

@@ -1,4 +1,3 @@
-package jugador;
 
 import equipo.Equipo;
 import jugador.Jugador;
@@ -10,11 +9,11 @@ import jugador.centrocampista.MediaPunta;
 import jugador.delantero.Extremo;
 import jugador.delantero.DelanteroCentro;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 
-		Equipo equipo = new Equipo();
+		Equipo equipo = new Equipo("Real Madrid");
 
 		Jugador portero = new Portero("Casillas", 1, "Real Madrid", 150);
 		Jugador lateralIzquierdo = new Lateral("Marcelo", 12, "Real Madrid", 50, "Izquierdo");
@@ -28,24 +27,33 @@ public class main {
 		Jugador extremoDerecho = new Extremo("Asensio", 11, "Real Madrid", 35, "Derecho");
 		Jugador delanteroCentro = new DelanteroCentro("Benzema", 9, "Real Madrid", 100, 10);
 
-		equipo.añadirJugador(portero, 0);
-        	equipo.añadirJugador(lateralIzquierdo, 1);
-        	equipo.añadirJugador(central1, 2);
-        	equipo.añadirJugador(central2, 3);
-        	equipo.añadirJugador(lateralDerecho, 4);
-        	equipo.añadirJugador(pivote1, 5);
-        	equipo.añadirJugador(pivote2, 6);
-        	equipo.añadirJugador(mediapunta, 7);
-        	equipo.añadirJugador(extremoIzquierdo, 8);
-        	equipo.añadirJugador(extremoDerecho, 9);
-        	equipo.añadirJugador(delanteroCentro, 10);
-		
-        	for (int i = 0; i < equipo.getAlineacion().length; i++) {
-            		Jugador ju = equipo.getAlineacion()[i];
-            		if (ju != null) {
-                		ju.mostrarDatos();
-            		}
-        	}
+		equipo.añadirJugador(portero, 1);
+		equipo.añadirJugador(lateralIzquierdo, 2);
+		equipo.añadirJugador(central1, 3);
+		equipo.añadirJugador(central2, 4);
+		equipo.añadirJugador(lateralDerecho, 5);
+		equipo.añadirJugador(pivote1, 6);
+		equipo.añadirJugador(pivote2, 7);
+		equipo.añadirJugador(mediapunta, 8);
+		equipo.añadirJugador(extremoIzquierdo, 9);
+		equipo.añadirJugador(extremoDerecho, 10);
+		equipo.añadirJugador(delanteroCentro, 11);
+
+		// Mostrar alineación
 		equipo.mostrarAlineacion();
+
+		// Selección dinámica de métodos
+		boolean mensaje = true;
+		for (int i = 0; i < equipo.getAlineacion().length; i++) {
+			Jugador ju = equipo.getAlineacion()[i];
+			if (ju != null) {
+				if (mensaje) {
+					System.out.println("\nPlantilla:");
+					mensaje = false;
+				}
+
+				ju.mostrarDatos();
+			}
+		}
 	}
 }

@@ -7,7 +7,7 @@ public class Portero extends Jugador {
 	private int paradas;
 
 	public Portero(String nombre, int dorsal, String equipo, int paradas) {
-		super(nombre, dorsal, equipo);
+		super(nombre, dorsal, equipo, "Portero");
 		this.paradas = paradas;
 	}
 
@@ -21,12 +21,8 @@ public class Portero extends Jugador {
 
 	@Override
 	public void mostrarDatos() {
-		System.out.println(this.toString());
+		System.out.println("Nombre: " + this.getNombre() + ", Dorsal: " + this.getDorsal() + ", Posición: "
+				+ this.getPosicion() + ", Paradas: " + this.paradas);
 	}
 
-	@Override
-	public String toString() {
-		return " Portero[nombre= " + this.getNombre() + ", dorsal= " + this.getDorsal() + ", equipo= " + this.getEquipo()
-				+ ", paradas= " + this.paradas + "]";
-	}
 }

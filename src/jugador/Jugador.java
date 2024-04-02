@@ -6,12 +6,14 @@ public abstract class Jugador {
 	private String nombre;
 	private int dorsal;
 	private String equipo;
+	private String posicion;
 
 	// Constructor
-	public Jugador(String nombre, int dorsal, String equipo) {
+	public Jugador(String nombre, int dorsal, String equipo, String posicion) {
 		setDorsal(dorsal);
 		this.nombre = nombre;
 		this.equipo = equipo;
+		this.posicion = posicion;
 	}
 
 	// Getters y setters
@@ -41,6 +43,15 @@ public abstract class Jugador {
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
+	
+	public String getPosicion() {
+		return this.posicion;
+	}
+
+	public void setPosicion(String posicion) {
+		this.posicion = posicion;
+	}
+	
 
 	// Método
 	public abstract void mostrarDatos();

@@ -12,7 +12,7 @@ public class DelanteroCentro extends Delantero {
 
 	}
 
-	// Metodos get y set
+	// Get y set
 	public int getGolesDePenalti() {
 		return golesDePenalti;
 	}
@@ -21,16 +21,16 @@ public class DelanteroCentro extends Delantero {
 		this.golesDePenalti = golesDePenalti;
 	}
 
+	// Métodos
 	@Override
 	public void mostrarDatos() {
 		System.out.println(this.toString());
-
 	}
 
 	@Override
 	public String toString() {
-		return " Delantero[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
-				+ this.getEquipo() + ", goles=" + this.getGoles() + ", golesDePenalti=" + this.golesDePenalti + "]";
+		return "Nombre: " + this.getNombre() + ", Dorsal: " + this.getDorsal() + ", Posición: " + this.getPosicion()
+				+ ", Goles: " + this.getGoles() + ", GolesDePenalti: " + this.golesDePenalti;
 	}
 
 }

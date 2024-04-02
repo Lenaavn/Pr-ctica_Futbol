@@ -2,19 +2,19 @@ package jugador.centrocampista;
 
 import jugador.Jugador;
 
-public class Centrocampista extends Jugador {
+public abstract class Centrocampista extends Jugador {
 
-	// atributos
+	// Atributos
 	private int pasesCompletados;
 
-	// constructores
-	public Centrocampista(String nombre, int dorsal, String equipo, int pasesCompletados) {
-		super(nombre, dorsal, equipo);
+	// Constructores
+	public Centrocampista(String nombre, int dorsal, String equipo, String posicion, int pasesCompletados) {
+		super(nombre, dorsal, equipo, posicion);
 
 		this.pasesCompletados = pasesCompletados;
 	}
 
-	// getters y setters
+	// Getters y setters
 	public int getPasesCompletados() {
 		return this.pasesCompletados;
 	}
@@ -23,17 +23,4 @@ public class Centrocampista extends Jugador {
 		this.pasesCompletados = pasesCompletados;
 	}
 
-	// metodos
-
-	@Override
-	public void mostrarDatos() {
-		System.out.println(this.toString());
-
-	}
-
-	@Override
-	public String toString() {
-		return " Centrocampista[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
-				+ this.getEquipo() + ", pasesCompletados=" + this.pasesCompletados + "]";
-	}
 }

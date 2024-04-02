@@ -1,16 +1,17 @@
 package jugador.defensa;
 
 public class Central extends Defensa {
-	// atributos
+
+	// Atributos
 	private int entradas;
 
-	// constructores
+	// Constructores
 	public Central(String nombre, int dorsal, String equipo, int disputasRealizadas, int entradas) {
 		super(disputasRealizadas, nombre, dorsal, equipo);
 		this.entradas = entradas;
 	}
-	// getters y setters
 
+	// Getters y setters
 	public int getEntradas() {
 		return entradas;
 	}
@@ -19,6 +20,7 @@ public class Central extends Defensa {
 		this.entradas = entradas;
 	}
 
+	// Métodos
 	@Override
 	public void mostrarDatos() {
 		System.out.println(this.toString());
@@ -27,8 +29,8 @@ public class Central extends Defensa {
 
 	@Override
 	public String toString() {
-		return " Defensa[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo =" + this.getEquipo()
-				+ ", disputasRealizadas=" + this.getDisputasRealizadas() + ", entradas=" + this.entradas + "]";
+		return "Nombre: " + this.getNombre() + ", Dorsal: " + this.getDorsal() + ", Posición: " + this.getPosicion()
+				+ ", Entradas: " + this.entradas + ", DisputasRealizadas: " + this.getDisputasRealizadas();
 	}
 
 }

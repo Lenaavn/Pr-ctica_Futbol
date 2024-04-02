@@ -2,17 +2,17 @@ package jugador.centrocampista;
 
 public class MediaPunta extends Centrocampista {
 
-	// atributos
+	// Atributos
 	private int asistencias;
 
-	// constructores
+	// Constructores
 	public MediaPunta(String nombre, int dorsal, String equipo, int pasesCompletados, int asistencias) {
-		super(nombre, dorsal, equipo, pasesCompletados);
+		super(nombre, dorsal, equipo, "MediaPunta", pasesCompletados);
 
 		this.asistencias = asistencias;
 	}
 
-	// getters y setters
+	// Getters y setters
 	public int getAsistencias() {
 		return this.asistencias;
 	}
@@ -21,7 +21,7 @@ public class MediaPunta extends Centrocampista {
 		this.asistencias = asistencias;
 	}
 
-	// metodos
+	// Metodos
 
 	@Override
 	public void mostrarDatos() {
@@ -31,8 +31,8 @@ public class MediaPunta extends Centrocampista {
 
 	@Override
 	public String toString() {
-		return " MediaPunta[nombre=" + this.getNombre() + ", dorsal=" + this.getDorsal() + ", equipo ="
-				+ this.getEquipo() + ", pasesCompletados=" + this.getPasesCompletados() + ", asistencias="
-				+ this.asistencias + "]";
+		return "Nombre: " + this.getNombre() + ", Dorsal: " + this.getDorsal() + ", Posición: " + this.getPosicion()
+				+ ", PasesCompletados: " + this.getPasesCompletados() + ", Asistencias: " + this.asistencias;
 	}
+
 }
